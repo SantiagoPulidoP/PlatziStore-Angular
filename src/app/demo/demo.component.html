@@ -1,0 +1,38 @@
+<!-- <input type="text" [(ngModel)]="title" />{{ title }}
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'santiago'">Hola, Soy {{ title }}</p>
+  <p *ngSwitchCase="'Maria'">Hola, Soy {{ title }}</p>
+  <p *ngSwitchCase="'Sara'">Hola, Soy {{ title }}</p>
+  <p *ngSwitchDefault>No hay Match</p>
+</div>
+<app-product></app-product>
+<button (click)="addItem()">Add</button>
+<ul>
+  <li *ngIf="items.length === 0">La lista esta vacia</li>
+  <li *ngFor="let name of items; index as i">
+    {{ name }} {{ i }}
+    <button (click)="deleteItem(i)">Delete</button>
+  </li>
+</ul>
+
+<table cellspacing="10" cellpadding="10" border="2">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Edad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.age }}</td>
+    </tr>
+  </tbody>
+</table>
+ -->
+<input type="text" [(ngModel)]="power" /> {{ power | exponential }}
