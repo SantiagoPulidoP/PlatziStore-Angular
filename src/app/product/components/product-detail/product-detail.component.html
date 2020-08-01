@@ -1,0 +1,11 @@
+<div>
+  <img [src]="product.image" alt="imgen del producto" />
+</div>
+<div>
+  <ul>
+    <li>Nombre: {{ product.title }}</li>
+    <li>Precio: {{ product.price | currency }}</li>
+  </ul>
+  <p>Descripcion: {{ product.description }}</p>
+  <a routerLink="/products">Volver</a>
+</div>
