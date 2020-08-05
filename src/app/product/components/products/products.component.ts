@@ -7,7 +7,7 @@ import { Product } from '../../../product.model';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
-  products: Product[];
+  products: Product[] = [];
   constructor(private productsService: ProductsService) {}
 
   clickProduct(id: number): void {
@@ -15,6 +15,12 @@ export class ProductsComponent implements OnInit {
     console.log(id);
   }
   ngOnInit(): void {
-    this.products = this.productsService.getAllProducts();
+    this.fetchProducts();
+  }
+
+  fetchProducts() {
+    this.productsService
+      .getAllProducts()
+      .subscribe((products) => (this.products = products));
   }
 }

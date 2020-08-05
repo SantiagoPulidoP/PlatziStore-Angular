@@ -1,11 +1,19 @@
-<div>
-  <img [src]="product.image" alt="imgen del producto" />
+<div *ngIf="product">
+  <div>
+    <img [src]="product.image" alt="imgen del producto" />
+  </div>
+  <div>
+    <ul>
+      <li>Nombre: {{ product.title }}</li>
+      <li>Precio: {{ product.price | currency }}</li>
+    </ul>
+    <p>Descripcion: {{ product.description }}</p>
+    <a routerLink="/products">Volver</a>
+    <button (click)="createProduct()">Crear</button>
+    <button (click)="updateProduct()">Update</button>
+    <button (click)="deleteProduct()">Delete</button>
+  </div>
 </div>
-<div>
-  <ul>
-    <li>Nombre: {{ product.title }}</li>
-    <li>Precio: {{ product.price | currency }}</li>
-  </ul>
-  <p>Descripcion: {{ product.description }}</p>
-  <a routerLink="/products">Volver</a>
+<div *ngIf="!product">
+  <h1>Loading...</h1>
 </div>
