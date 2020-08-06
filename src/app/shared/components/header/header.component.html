@@ -10,7 +10,11 @@
           >Contact</a
         >
       </nav>
-      <a href="" mat-raised-button matBadge="4" matBadgeColor="warn"
+      <a
+        routerLink="/order"
+        mat-raised-button
+        [matBadge]="total$ | async"
+        matBadgeColor="warn"
         ><span class="material-icons"> shopping_cart </span>Carrito</a
       >
     </div>

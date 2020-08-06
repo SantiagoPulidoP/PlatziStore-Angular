@@ -6,6 +6,7 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 import { HightlightDirective } from './directives/hightlight/hightlight.directive';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './../material/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { MaterialModule } from './../material/material.module';
     ExponentialPipe,
     HightlightDirective,
   ],
-  imports: [CommonModule, RouterModule, MaterialModule],
+  imports: [CommonModule, RouterModule, MaterialModule, ReactiveFormsModule],
   exports: [
     HeaderComponent,
     FooterComponent,

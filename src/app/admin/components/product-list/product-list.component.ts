@@ -21,13 +21,11 @@ export class ProductListComponent implements OnInit {
     this.productsService
       .getAllProducts()
       .subscribe((products) => (this.products = products));
-    console.log(this.products);
   }
   deleteProduct(id: string) {
     this.productsService.deleteProduct(id).subscribe((rta) => {
       console.log(rta);
-      this.products.splice(Number(id) - 1, 1);
-      console.log(this.products);
+      this.products = this.products.filter((prod) => prod.id !== id);
     });
   }
 }
